@@ -1,3 +1,5 @@
+package Model;
+
 import java.time.LocalDate;
 
 public class Aluno {
@@ -38,7 +40,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" +
+        return "Model.Aluno{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", dataNascimento=" + dataNascimento +
