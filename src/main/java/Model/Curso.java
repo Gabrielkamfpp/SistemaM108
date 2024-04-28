@@ -1,3 +1,5 @@
+package Model;
+
 public class Curso {
     private static int proximoId = 1;
 
@@ -53,5 +55,14 @@ public class Curso {
                 ", descricao='" + descricao + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
+    }
+
+    public void setNome(String nome) {
+    }
+
+    public void setDescricao(String descricao) {
+    }
+
+    public void setCargaHoraria(int cargaHoraria) {
     }
 }

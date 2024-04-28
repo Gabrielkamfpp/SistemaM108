@@ -14,6 +14,10 @@ public class Aluno {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
+
+    public static void add(Aluno aluno) {
+    }
+
     public int getId() {
         return id;
     }
