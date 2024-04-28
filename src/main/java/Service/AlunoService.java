@@ -1,16 +1,29 @@
+package Controller;
+
 import Model.Aluno;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import Repository.AlunoService;
 
-@Setter
-@Autowired
+public class AlunoManagement {
 
-private Repository.AlunoService alunoService;
+    private final AlunoService alunoService;
 
-Aluno novoAluno = alunoService.CriarAluno("João Silva", "12345", "Ciência da Computação");
+    @Autowired
+    public AlunoManagement(AlunoService alunoService) {
+        this.alunoService = alunoService;
+    }
 
-Aluno alunoEncontrado = alunoService.buscarAlunoPorMatricula("12345");
+    public Aluno createAluno(String nome, String matricula, String curso) {
+        return alunoService.criarAluno(nome, matricula, curso);
+    }
 
-public void main() {
+    public Aluno findAlunoByMatricula(String matricula) {
+        return alunoService.buscarAlunoPorMatricula(matricula);
+    }
+
+    // Example usage (assuming this is a Spring Boot application)
+    public static void main(String[] args) {
+        // Spring Boot application context will handle bean creation and injection
+    }
 }
 
