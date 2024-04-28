@@ -1,20 +1,20 @@
-package Controller;
+package Service;
 
 import Model.Aluno;
 import org.springframework.beans.factory.annotation.Autowired;
-import Repository.AlunoService;
+
 
 public class AlunoManagement {
 
-    private final AlunoService alunoService;
+    private final Aluno alunoService;
 
     @Autowired
-    public AlunoManagement(AlunoService alunoService) {
+    public AlunoManagement(Aluno alunoService) {
         this.alunoService = alunoService;
     }
 
     public Aluno createAluno(String nome, String matricula, String curso) {
-        return alunoService.criarAluno(nome, matricula, curso);
+        return alunoService;
     }
 
     public Aluno findAlunoByMatricula(String matricula) {

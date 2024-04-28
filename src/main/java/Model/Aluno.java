@@ -50,4 +50,12 @@ public class Aluno {
                 ", dataNascimento=" + dataNascimento +
                 '}';
     }
+
+    public void criarAluno(String nome, String matricula, String curso) {
+
+    }
+
+    public Aluno buscarAlunoPorMatricula(String matricula) {
+        return null;
+    }
 }
